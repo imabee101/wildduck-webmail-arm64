@@ -1,5 +1,5 @@
 # ---
-from alpine:3.9 as builder
+from arm64v8/alpine:3.9 as builder
 
 ARG UID=1000
 ENV APP_PATH /app
@@ -16,7 +16,7 @@ USER builder
 RUN npm install && npm run bowerdeps
 
 # ---
-from alpine:3.9 as app
+from arm64v8/alpine:3.9 as app
 RUN apk add --no-cache nodejs
 ENV APP_PATH /app
 WORKDIR ${APP_PATH}
