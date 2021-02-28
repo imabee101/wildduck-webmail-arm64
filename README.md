@@ -1,4 +1,4 @@
-# WildDuck Mail Service
+# WildDuck Mail Service for arm64v8
 
 **What is this?**
 
